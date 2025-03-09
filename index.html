@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRAVY </title>
+    <link rel="icon" href="logo@icon/logo">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="reg">
+    <div id="logo">
+        <img src="logo@icon/logo" style="height:40px;width:40px;">
+        <h1 id="c"><i>C</i></h1>
+        <h1 id="r" ><strong>R</strong></h1>
+        <h1 id="a" ><del>A</del></h1>
+        <h1 id="v" ><i>V</i></h1>
+        <h1 id="y" ><b>Y</b></h1>
+        <p><i>hey our delicious food is waiting for you,we are always near to you with fresh item of food.</i></p>
+        </div>
+    <div class="form" >
+        <form onsubmit="storedata(event)">
+            <h2>Register</h2>
+        <label for="name" >Full Name:</label>
+        <input id="name" name="fullname" placeholder="Enter your name" required>
+
+        <label for="email">Email:</label>
+        <input id="email" type="email" name="email" placeholder="Enter your email" required>
+
+        <label for="password">Password:</label>
+        <input id="password" name="password" placeholder="Create a Password" required>
+
+        <label for="conf_pass">Conform_password:</label>
+        <input id="conf_pass" name="conf_pass" placeholder="Conform your Password" required>
+        <br>
+        <button type="submit">Register</button>
+    </form>
+        <p>Already have an Account? <a href="login.html">LOGIN</a></p>
+    </div>
+   <script src="script.js"></script>
+</div>
+</body>
+</html>

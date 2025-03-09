@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        text-align: center;
+    }
+
+    h1 {
+        color: #4f0a05;
+    }
+
+    table {
+        width: 60%;
+        margin: 20px auto;
+        border-collapse: collapse;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    th, td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        background-color:#e5a159 ;
+        color: white;
+    }
+
+    td {
+        background-color: #ecf0f1;
+    }
+
+    tfoot td {
+        font-weight: bold;
+        background-color: #d27a28;
+        color: white;
+    }
+
+    button {
+        background-color:#601106 ;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    button:hover {
+        background-color: #2980b9;
+    }
+</style>
+
+<body>
+    <h1>Your Cart</h1>
+
+    <table id="cart-table">
+        <thead>
+            <tr>
+                <th>Item Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody id="cart-items">
+        
+        </tbody>
+        <tfoot>
+            <tr>
+                <td><strong>Total</strong></td>
+                <td id="total-price">0</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <br>
+
+    <button onclick="window.location.href='homepage.html'">Go Back to Home</button>
+
+    <script>
+        const cartItems = JSON.parse(localStorage.getItem('cart-item-list')) || [];
+    const cartItemsContainer = document.getElementById('cart-items');
+    const totalPriceContainer = document.getElementById('total-price');
+
+    let totalPrice = 0;
+
+    if (cartItems.length === 0) {
+     
+        const emptyRow = document.createElement('tr');
+        emptyRow.innerHTML = `<td colspan="2">Your cart is empty</td>`;
+        cartItemsContainer.appendChild(emptyRow);
+    } else {
+        for (let i = 0; i < cartItems.length; i++) {
+            const item = cartItems[i];
+
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${item.name}</td> 
+                <td>${parseFloat(item.price).toFixed(2)}</td>
+            `;
+            cartItemsContainer.appendChild(row);
+
+            totalPrice += parseFloat(item.price);
+        }
+    }
+
+    totalPriceContainer.textContent = totalPrice.toFixed(2);
+       
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,305 @@
+.reg,.login{
+    background: url(bg/foood.jpg);
+    width:100%;
+   background-size: cover;
+    background-repeat: no-repeat;
+    height:100vh;
+}
+.reg{
+    height:125vh !important;
+}
+#c{
+    animation:colorchange1 5s linear infinite ;}
+    @keyframes colorchange1{
+        0%{
+            color:red;
+        }
+        20%{
+            color:blue;
+        }
+        40%{
+            color:green;
+        }
+        60%{color:violet;}
+        80%{color:yellow;}
+        100%{color:black;}
+    }
+#r{
+        animation:colorchange2 5s linear infinite ;}
+        @keyframes colorchange2{
+            0%{
+                color:blue;
+            }
+            20%{
+                color:red;
+            }
+            40%{
+                color:violet;
+            }
+            60%{color:yellow;}
+            80%{color:coral;}
+            100%{color:navy;}
+        }
+#a{
+            animation:colorchange3 5s linear infinite ;}
+            @keyframes colorchange3{
+                0%{
+                    color:navy;
+                }
+                20%{
+                    color:black;
+                }
+                40%{
+                    color:goldenrod;
+                }
+                60%{color:teal;}
+                80%{color:olive;}
+                100%{color:indigo;}
+     }
+ #v{
+                animation:colorchange4 5s linear infinite ;}
+                @keyframes colorchange4{
+                    0%{
+                        color:red;
+                    }
+                    20%{
+                        color:blue;
+                    }
+                    40%{
+                        color:sienna;
+                    }
+                    60%{color:hotpink;}
+                    80%{color:plum}
+                    100%{color:purple;}
+                }
+ #y{
+                    animation:colorchange5 5s linear infinite ;}
+                    @keyframes colorchange5{
+                        0%{
+                            color:red;
+                        }
+                        20%{
+                            color:blue;
+                        }
+                        40%{
+                            color:green;
+                        }
+                        60%{color:violet;}
+                        80%{color:yellow;}
+                        100%{color:black;}
+                    }
+ #logo h1{
+    display:inline;
+}
+#logo p{
+    display:inline;
+    padding-left: 150px;
+    color:#d54510;
+}
+#logo{
+    background-color: rgb(230, 227, 227);
+    border:1px solid whitesmoke;
+    display:block;
+    padding:15px;
+}
+.form {
+    background: whitesmoke;
+   height:100vh;
+   margin:auto;
+   width:400px;
+  
+}
+.form h2 {
+    text-align: center;
+    color: #d54510;
+}
+.form label {
+    display:block;
+    font-size:large;
+    margin:15px;
+}
+.form input {
+    margin:10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.form button {
+    width:100%;
+    margin:15px 0;
+   height:45px;
+   background-color: orangered;
+    color: white;
+    cursor: pointer;
+   
+}
+.form button:hover {
+    background-color: orange;
+}
+.form p {
+    text-align: center;
+    margin-top: 10px;
+}
+.form a {
+    color:orangered;
+}
+.form a:hover{
+    text-decoration:none;
+    color:orangered
+}
+.log{
+    background-color:whitesmoke;
+    height:55vh;
+    margin:100px 400px;
+    padding:15px;
+    width:400px;
+}
+.log label{
+    display:block;
+    margin:15px;
+    font-size: large;
+}
+.log input{
+    padding:10px;
+    margin:15px;
+    border:1px solid #ccc;
+   border-radius:5px;
+}
+.log button{
+   background-color:orangered;
+    border:3px solid black;
+    border-radius:5px;
+    padding:15px;
+    display:block;
+    width:100%;
+    margin:auto;
+}
+.log h2{
+    text-align: center;
+    color:#d54510;
+}
+    .proancar{
+        justify-content: flex-start;
+        align-items: center;
+        display:flex;
+        background-image:linear-gradient(to right,#000,#a83838,rgb(193, 139, 204),#7d73b1,#6ba1b7,#add6ad,#d8e0bf);
+        width:100%;
+        gap:900px;
+      
+    }
+   
+    .cart{
+       
+        display:inline;
+    }
+    .cart button {
+       padding:20px 50px;
+       color:black;
+       background-color: #d54510;
+       border:none;
+       border-radius: 10px;
+       display:inline;
+      vertical-align: baseline;
+    }
+
+    .cart button:hover {
+        background-color:#832807;
+    }
+    .home{
+      
+        width:100%;
+        height:100vh;
+    }
+ 
+    .foodgrid{
+        display:grid;
+        grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
+        gap:50px;
+      margin-left:150px;
+      margin-right:150px;
+
+       
+    }
+    .foodgrid img{
+        object-fit: cover;
+        height:150px;
+        width:100%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 40%;
+        
+    }
+    .foodgrid img:hover{
+        cursor: pointer;
+        transform: scale(0.9);
+        transition: transform 0.3s ease-in-out;
+    }
+    .foodgrid h3{
+        text-align: center;
+    }
+    .foodgrid a{
+        text-decoration: none ;
+    }
+    .briyanii{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
+        margin-left:150px;
+        margin-right:150px;
+        gap:100px;
+
+    } 
+    .briyanii img{
+        object-fit: cover;
+        height:200px;
+        width:100%;
+        box-shadow:0 4px 8px rgba(0,0,0,0.2);
+        border-radius:40%;
+    }
+    .briyanii button{
+        padding:15px;
+        background-color: rgb(183, 105, 105);
+        color:white;
+        border-radius:30px;
+    }
+    .briyanii button:hover{
+        background-color: rgb(164, 63, 63);
+    }
+    .briyanii img:hover{
+        cursor:pointer;
+        transform:scale(0.9);
+        transition:transform 0.3s ease-in-out;
+    }
+    button {
+        background-color: #3498db;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    button:hover {
+        background-color: #2980b9;
+    }
+    .profile{
+       display: inline-block;
+        border:solid 5px black ;
+        border-radius:20px;
+        color:black;
+        padding:10px;
+        background-color: #b19b9b;
+        margin-left:400px;
+        margin-top:50px;
+    }
+    #phno,#add{
+        border:solid grey 1px;
+        border-radius:5px;
+        padding:10px;
+    }
+
+   
+
+
+    
+
+
