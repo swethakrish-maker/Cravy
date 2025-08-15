@@ -8,34 +8,35 @@
     <link rel="icon" href="logo@icon/logo">
 </head>
 <body>
-    <script src="script.js">
- </script>
-<div class="home">
-    <div id="logo">
-        <img src="logo@icon/logo" style="height:40px;width:40px;">
-        <h1 id="c"><i>C</i></h1>
-        <h1 id="r" ><strong>R</strong></h1>
-        <h1 id="a" ><del>A</del></h1>
-        <h1 id="v" ><i>V</i></h1>
-        <h1 id="y" ><b>Y</b></h1>
-        <p><i>hey our delicious food is waiting for you,we are always near to you with fresh item of food.</i></p>
-    </div>
-    <div class="proancar">
-            <div class="about">
-                <a href="about.html"><img src="logo@icon/icon.jpg" style="height:70px;width:50px;"><br>
-                <b>Profile</b></p></a>
+    <script src="script.js"></script>
+    <div class="profile-cart">
+        <div id="logo">
+            <img src="logo@icon/logo" style="height:40px;width:40px;">
+            <h1 id="c"><i>C</i></h1>
+            <h1 id="r" ><strong>R</strong></h1>
+            <h1 id="a" ><del>A</del></h1>
+            <h1 id="v" ><i>V</i></h1>
+            <h1 id="y" ><b>Y</b></h1>
+            <p><i>hey our delicious food is waiting for you,we are always near to you with fresh item of food.</i></p>
+        </div>
+
+         <div class="proancar">
+            <div class="about" onclick="profile(),showcontent('profile')">
+                <img src="logo@icon/icon.jpg" style="height:70px;width:50px;border:none;border-radius:50%;"><br>
+                <b style="color:white;">Profile</b></p>
             </div>
            
             <div class="cart">
-                <button onclick="gotocart()">cart(<span id="cartcount">0</span>)</button>
+                <button onclick="showcontent('cart')">cart(<span id="cartcount">0</span>)</button>
             </div>
-            
+       
+        </div>
     </div>
-    
+<div class="home">
     <h2 style="color:brown; margin-left:25px;"><strong>Order our best food option</strong></h2><br><br>
     <div class="foodgrid">
 
-        <div class="briyani" ><a href="briyani.html"><img src="foods/briyani.jpg"><h3>Briyani</h3></a></div>
+        <div class="briyani" onclick="showcontent('briyani')" ><img src="foods/briyani.jpg"><h3>Briyani</h3></div>
 
         <div class="dosa"><a href="#"><img src="foods/dosa.jpg"><h3>Dosa</h3></p></a></div>
 
@@ -62,6 +63,139 @@
 
     </div>
  </div>
+ <!--Profile-content here-->
+ <div class="profile-content" style="display: none;">
+    <h1 style="color: rgb(57, 27, 27); text-align: center;">Welcome, <span class="user"></span></h1>
+    
+    <!-- Profile Creation/Edit Form -->
+    <div class="profile-form" id="profile-form">
+        <h2 style="color: #d54510; text-align: center;">Create/Edit Profile</h2>
+        <div class="profile-details">
+            <h2><strong>Name:</strong> <span class="user"></span></h2>
+            <h2><strong>Email:</strong> <span class="email"></span></h2>
+            
+            <label for="phno"><strong>Phone:</strong></label>
+            <input id="phno" placeholder="Enter your phone number" type="tel" required>
+            
+            <label for="address"><strong>Address:</strong></label>
+            <textarea id="address" placeholder="Enter your address" rows="5" cols="30" required></textarea>
+            
+            <label for="age"><strong>Age:</strong></label>
+            <input id="age" placeholder="Enter your age" type="number" min="1" max="120">
+            
+            <label for="city"><strong>City:</strong></label>
+            <input id="city" placeholder="Enter your city" type="text">
+            
+            <label for="preferences"><strong>Food Preferences:</strong></label>
+            <select id="preferences">
+                <option value="">Select preference</option>
+                <option value="vegetarian">Vegetarian</option>
+                <option value="non-vegetarian">Non-Vegetarian</option>
+                <option value="vegan">Vegan</option>
+                <option value="no-preference">No Preference</option>
+            </select>
+            
+            <br><br>
+            <button onclick="saveProfile()">Save Profile</button>
+            <button onclick="clearProfile()" style="background-color: #832807;">Clear Profile</button>
+        </div>
+    </div>
 
+    <!-- Profile Display -->
+    <div class="profile-display" id="profile-display" style="display: none;">
+        <h2 style="color: #d54510; text-align: center;">Your Profile</h2>
+        <div class="profile-view">
+            <div class="profile-info">
+                <h3><strong>Name:</strong> <span class="display-name"></span></h3>
+                <h3><strong>Email:</strong> <span class="display-email"></span></h3>
+                <h3><strong>Phone:</strong> <span class="display-phone"></span></h3>
+                <h3><strong>Age:</strong> <span class="display-age"></span></h3>
+                <h3><strong>City:</strong> <span class="display-city"></span></h3>
+                <h3><strong>Food Preference:</strong> <span class="display-preferences"></span></h3>
+                <h3><strong>Address:</strong></h3>
+                <p class="display-address"></p>
+            </div>
+            <br>
+            <button onclick="editProfile()">Edit Profile</button>
+        </div>
+    </div>
+
+    <button onclick="showcontent('home')" style="margin-top: 20px;">Go Back to Home</button>
+ </div>
+<!--Cart-content here...-->
+<div class="cart-content" style="display: none;">
+    <h1>Your Cart</h1>
+
+    <table id="cart-table">
+        <thead>
+            <tr>
+                <th>Item Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>cart-Items</th>
+            </tr>
+        </thead>
+        <tbody id="cart-items"></tbody>
+        <tfoot>
+            <tr>
+                <td><strong>Total</strong></td>
+                <td id="total-price">0</td>
+            </tr>
+            <tr>
+                <button id="clear-cart" onclick="clearCart()" 
+                style="border-radius:10px;background-color: #af508b;">
+                    Clear Cart
+                </button>
+            </tr>
+        </tfoot>
+    </table>
+
+    <button onclick="showcontent('home')">Go Back to Home</button>
+</div>
+
+
+ <!--briyani content here...-->
+
+<div class="briyani-content" style="display:none;">
+    <button onclick="showcontent('home')" style="margin-left:500px; margin-top:20px;">HOME</button>
+     <h1 style="margin-left:300px;color:#a83838;">BRIYANI</h1>
+  
+ <div class="briyanii">
+  <div class="chicken">
+
+    <h3><b>CHICKEN BRIYANI</b></h3>
+    <img src="briyani/chicken.jpg">
+    <h4>Price:<span id="prize">240</span></h4>
+    <button onclick="cart(' CHICKEN BRIYANI ',240)">Add to Cart</button>
+
+  </div> 
+  <div class="mutton">
+
+    <h3 id="fname"><b>MUTTON BRIYANI</b></h3>
+    <img src="briyani/mutton.jpg">
+    <h4>price:<span id="prize">320</span></h4>
+    <button onclick="cart(' MUTTON BRIYANI',320)">Add to Cart</button>
+
+  </div>
+  <div class="prawn">
+
+    <h3 id="fname"><b>PRAWN BRIYANI</b></h3>
+    <img src="briyani/prawn.jpg">
+    <h4>price:<span id="prize">280</span></h4>
+    <button onclick="cart(' PRAWN BRIYANI',280)">Add to Cart</button>
+
+  </div>
+  <div class="fish">
+
+    <h3 id="fname"><b> FISH BRIYANI</b></h3>
+    <img src="briyani/fish.jpg">
+    <h4>price:<span id="prize">400</span></h4>
+    <button onclick="cart(' FISH BRIYANI',400)">Add to Cart</button>
+
+  </div>
+  
+ </div>
+
+</div>
 </body>
 </html>
