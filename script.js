@@ -302,3 +302,49 @@ function removeItem(_itemName) {
   }
 }
 
+// Mobile Layout Fix - Force center positioning
+function fixMobileLayout() {
+    if (window.innerWidth <= 767) {
+        // Fix login page
+        const loginDiv = document.querySelector('.login');
+        const logDiv = document.querySelector('.log');
+        if (loginDiv && logDiv) {
+            loginDiv.style.display = 'flex';
+            loginDiv.style.flexDirection = 'column';
+            loginDiv.style.alignItems = 'center';
+            loginDiv.style.justifyContent = 'center';
+            loginDiv.style.minHeight = '100vh';
+            loginDiv.style.padding = '10px';
+            
+            logDiv.style.margin = '0 auto';
+            logDiv.style.width = '90%';
+            logDiv.style.maxWidth = '350px';
+            logDiv.style.position = 'relative';
+            logDiv.style.left = 'auto';
+            logDiv.style.right = 'auto';
+        }
+        
+        // Fix navigation
+        const proancar = document.querySelector('.proancar');
+        if (proancar) {
+            proancar.style.flexDirection = 'column';
+            proancar.style.alignItems = 'center';
+            proancar.style.gap = '20px';
+            proancar.style.padding = '15px';
+        }
+        
+        // Fix cart button
+        const cartButton = document.querySelector('.cart button');
+        if (cartButton) {
+            cartButton.style.margin = '0 auto';
+            cartButton.style.display = 'block';
+            cartButton.style.width = '200px';
+            cartButton.style.maxWidth = '80%';
+        }
+    }
+}
+
+// Run on page load and resize
+document.addEventListener('DOMContentLoaded', fixMobileLayout);
+window.addEventListener('resize', fixMobileLayout);
+window.addEventListener('orientationchange', fixMobileLayout);
