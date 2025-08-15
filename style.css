@@ -559,25 +559,28 @@ tfoot td {
         grid-template-columns: repeat(1, 1fr);
         gap: 20px;
     }
-}/*
+}
+
+/*
  Navigation and Profile Responsive Styles */
 @media screen and (max-width: 768px) {
     .proancar {
         gap: 200px;
         padding: 10px;
     }
-    
-    .profile-details, .profile-view {
+
+    .profile-details,
+    .profile-view {
         margin-left: 50px;
         margin-right: 50px;
         max-width: none;
     }
-    
+
     .cart button {
         padding: 15px 30px;
         font-size: 14px;
     }
-    
+
     .log {
         margin: 50px 50px;
         width: auto;
@@ -591,23 +594,24 @@ tfoot td {
         align-items: center;
         padding: 15px;
     }
-    
-    .profile-details, .profile-view {
+
+    .profile-details,
+    .profile-view {
         margin-left: 20px;
         margin-right: 20px;
         padding: 15px;
     }
-    
+
     .cart button {
         padding: 12px 25px;
         font-size: 12px;
     }
-    
+
     #logo p {
         padding-left: 20px;
         font-size: 14px;
     }
-    
+
     .log {
         margin: 20px 20px;
         width: auto;
@@ -615,50 +619,54 @@ tfoot td {
 }
 
 @media screen and (max-width: 320px) {
-    .profile-details, .profile-view {
+
+    .profile-details,
+    .profile-view {
         margin-left: 10px;
         margin-right: 10px;
         padding: 10px;
     }
-    
+
     .cart button {
         padding: 10px 20px;
         font-size: 11px;
     }
-    
+
     #logo p {
         padding-left: 10px;
         font-size: 12px;
         display: block;
         margin-top: 10px;
     }
-    
+
     .log {
         margin: 10px 10px;
         width: auto;
     }
-}/* Typog
+}
+
+/* Typog
 raphy and Touch Target Responsive Styles */
 @media screen and (max-width: 768px) {
     .foodgrid h3 {
         font-size: 14px;
     }
-    
+
     .briyanii h3 {
         font-size: 16px;
     }
-    
+
     .briyanii button {
         padding: 18px;
         font-size: 14px;
         min-height: 44px;
     }
-    
+
     button {
         min-height: 44px;
         padding: 12px 24px;
     }
-    
+
     table {
         width: 90%;
         font-size: 14px;
@@ -669,44 +677,45 @@ raphy and Touch Target Responsive Styles */
     .foodgrid h3 {
         font-size: 12px;
     }
-    
+
     .briyanii h3 {
         font-size: 14px;
     }
-    
+
     .briyanii button {
         padding: 20px;
         font-size: 16px;
         min-height: 48px;
         width: 100%;
     }
-    
+
     button {
         min-height: 48px;
         padding: 15px 30px;
         font-size: 16px;
     }
-    
+
     .profile-details input,
     .profile-details textarea,
     .profile-details select {
         min-height: 44px;
         font-size: 16px;
     }
-    
+
     table {
         width: 95%;
         font-size: 12px;
     }
-    
-    th, td {
+
+    th,
+    td {
         padding: 8px 4px;
     }
-    
+
     h1 {
         font-size: 24px;
     }
-    
+
     h2 {
         font-size: 20px;
     }
@@ -716,33 +725,36 @@ raphy and Touch Target Responsive Styles */
     .foodgrid h3 {
         font-size: 11px;
     }
-    
+
     .briyanii h3 {
         font-size: 13px;
     }
-    
+
     .briyanii button {
         padding: 15px;
         font-size: 14px;
     }
-    
+
     table {
         width: 100%;
         font-size: 11px;
     }
-    
-    th, td {
+
+    th,
+    td {
         padding: 6px 2px;
     }
-    
+
     h1 {
         font-size: 20px;
     }
-    
+
     h2 {
         font-size: 18px;
     }
-}/* Final 
+}
+
+/* Final 
 Mobile Optimizations */
 @media screen and (max-width: 768px) {
     .cart-content {
@@ -750,7 +762,7 @@ Mobile Optimizations */
         align-items: stretch;
         padding: 20px;
     }
-    
+
     .about img {
         height: 50px;
         width: 40px;
@@ -762,26 +774,28 @@ Mobile Optimizations */
         padding: 15px;
         margin-bottom: 50px;
     }
-    
-    .remove-item, .add-item, .decrease-item {
+
+    .remove-item,
+    .add-item,
+    .decrease-item {
         padding: 8px;
         min-height: 36px;
         min-width: 36px;
     }
-    
+
     #logo {
         padding: 10px;
     }
-    
+
     #logo h1 {
         font-size: 18px;
     }
-    
+
     .about {
         text-align: center;
         margin-bottom: 10px;
     }
-    
+
     .about img {
         height: 40px;
         width: 35px;
@@ -793,11 +807,11 @@ Mobile Optimizations */
         padding: 10px;
         margin-bottom: 30px;
     }
-    
+
     #logo h1 {
         font-size: 16px;
     }
-    
+
     .about img {
         height: 35px;
         width: 30px;
@@ -806,7 +820,9 @@ Mobile Optimizations */
 
 /* Ensure images are responsive */
 @media screen and (max-width: 768px) {
-    .foodgrid img, .briyanii img {
+
+    .foodgrid img,
+    .briyanii img {
         max-width: 100%;
         height: auto;
     }
@@ -821,26 +837,28 @@ Mobile Optimizations */
     body {
         overflow-x: hidden;
     }
-}/* L
+}
+
+/* L
 ogin Page Mobile Responsive Styles */
 @media screen and (max-width: 768px) {
     .login {
         padding: 20px;
     }
-    
+
     .log {
         margin: 50px auto !important;
         width: auto !important;
         max-width: 400px;
     }
-    
+
     .log input {
         width: 100%;
         box-sizing: border-box;
         font-size: 16px;
         min-height: 44px;
     }
-    
+
     .log button {
         min-height: 48px;
         font-size: 16px;
@@ -851,7 +869,7 @@ ogin Page Mobile Responsive Styles */
     .login {
         padding: 10px;
     }
-    
+
     .log {
         margin: 20px auto !important;
         padding: 20px;
@@ -859,24 +877,24 @@ ogin Page Mobile Responsive Styles */
         min-height: 50vh;
         width: 90% !important;
     }
-    
+
     .log h2 {
         font-size: 24px;
         margin-bottom: 20px;
     }
-    
+
     .log label {
         font-size: 16px;
         margin: 10px 0 5px 0;
     }
-    
+
     .log input {
         padding: 15px;
         margin: 5px 0 15px 0;
         font-size: 16px;
         border-radius: 8px;
     }
-    
+
     .log button {
         padding: 15px;
         font-size: 18px;
@@ -891,27 +909,29 @@ ogin Page Mobile Responsive Styles */
         padding: 15px;
         width: 95% !important;
     }
-    
+
     .log h2 {
         font-size: 20px;
     }
-    
+
     .log input {
         padding: 12px;
         font-size: 16px;
     }
-    
+
     .log button {
         padding: 12px;
         font-size: 16px;
     }
-}/* Reg
+}
+
+/* Reg
 istration Page Mobile Responsive Styles */
 @media screen and (max-width: 768px) {
     .reg {
         padding: 20px;
     }
-    
+
     .form {
         margin: 50px auto;
         width: 90%;
@@ -919,14 +939,14 @@ istration Page Mobile Responsive Styles */
         height: auto;
         min-height: 60vh;
     }
-    
+
     .form input {
         width: 100%;
         box-sizing: border-box;
         font-size: 16px;
         min-height: 44px;
     }
-    
+
     .form button {
         min-height: 48px;
         font-size: 16px;
@@ -937,38 +957,38 @@ istration Page Mobile Responsive Styles */
     .reg {
         padding: 10px;
     }
-    
+
     .form {
         margin: 20px auto;
         width: 95%;
         padding: 20px;
         height: auto;
     }
-    
+
     .form h2 {
         font-size: 24px;
         margin-bottom: 20px;
     }
-    
+
     .form label {
         font-size: 16px;
         margin: 10px 0 5px 0;
     }
-    
+
     .form input {
         padding: 15px;
         margin: 5px 0 15px 0;
         font-size: 16px;
         border-radius: 8px;
     }
-    
+
     .form button {
         padding: 15px;
         font-size: 18px;
         margin: 20px 0;
         border-radius: 8px;
     }
-    
+
     .form p {
         font-size: 14px;
         margin-top: 15px;
@@ -981,22 +1001,96 @@ istration Page Mobile Responsive Styles */
         width: 98%;
         padding: 15px;
     }
-    
+
     .form h2 {
         font-size: 20px;
     }
-    
+
     .form input {
         padding: 12px;
         font-size: 16px;
     }
-    
+
     .form button {
         padding: 12px;
         font-size: 16px;
     }
-    
+
     .form p {
         font-size: 12px;
+    }
+}
+
+
+    .login {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        min-height: 100vh !important;
+        padding: 10px !important;
+        box-sizing: border-box !important;
+    }
+
+    .login #logo {
+        width: 100% !important;
+        max-width: 350px !important;
+        margin-bottom: 20px !important;
+    }
+
+
+@media screen and (max-width: 480px) {
+    .log {
+        width: 95% !important;
+        margin: 10px auto !important;
+        padding: 15px !important;
+    }
+
+    .log input {
+        width: 100% !important;
+        box-sizing: border-box !important;
+        margin: 10px 0 !important;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .log {
+        width: 98% !important;
+        margin: 5px auto !important;
+        padding: 10px !important;
+    }
+}
+
+/* Mobi
+le Body and Viewport Fixes */
+@media screen and (max-width: 767px) {
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow-x: hidden !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    * {
+        box-sizing: border-box !important;
+    }
+
+    .login,
+    .reg {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 10px !important;
+        overflow-x: hidden !important;
+    }
+
+    /* Force center alignment */
+    .log,
+    .form {
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        float: none !important;
+        position: relative !important;
     }
 }
